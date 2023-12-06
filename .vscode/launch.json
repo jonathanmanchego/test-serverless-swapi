@@ -1,0 +1,57 @@
+{
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos.
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda with API Gateway",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "handler.swPeople",
+        "projectRoot": "${workspaceFolder}"
+      },
+      "lambda": {
+        "runtime": "nodejs18.x",
+        "payload": {
+          "json": {}
+        }
+      },
+      "api": {
+        "path": "http://localhost:3000/dev/v1/people",
+        "httpMethod": "post",
+        "payload": {
+          "json": {
+            "name": "Jonathan",
+            "height": 180,
+            "mass": 85,
+            "hair_color": "black",
+            "skin_color": "brown",
+            "eye_color": "brown",
+            "birth_year": 1999,
+            "gender": "M",
+            "homeworld": "Earth"
+          }
+        }
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "handler.swPeople",
+        "projectRoot": "${workspaceFolder}"
+      },
+      "lambda": {
+        "runtime": "nodejs18.x",
+        "payload": {
+          "json": {}
+        }
+      }
+    }
+  ]
+}
