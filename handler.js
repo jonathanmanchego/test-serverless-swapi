@@ -12,9 +12,6 @@ module.exports.hello = async (event) => {
       2
     ),
   };
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
 
 module.exports.swPeople = async (event) => {
@@ -40,9 +37,6 @@ module.exports.swPeople = async (event) => {
       2
     ),
   };
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
 
 module.exports.swCreatePeople = async (event) => {
@@ -64,7 +58,4 @@ module.exports.swCreatePeople = async (event) => {
       2
     ),
   };
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };

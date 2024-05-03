@@ -18,16 +18,10 @@ describe("FindPeopleUseCase", () => {
       // Arrange
       const personId = 1;
       const expectedDto = mock.personResponseMock;
-      // consumerBaseMock.get = jest.fn().mockResolvedValue(responseMock);
 
       // Act
       const findPeopleUseCase = new FindPeopleUseCase({ db: null });
       const result = await findPeopleUseCase.execute(personId);
-
-      // Assert
-      // expect(consumerBaseMock.get).toHaveBeenCalledWith({
-      //   path: `/people/${personId}/`,
-      // });
       expect(result).toEqual(expectedDto);
     });
   });
