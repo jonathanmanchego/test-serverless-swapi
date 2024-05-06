@@ -50,8 +50,12 @@ plugins:
 #                - "/*"
 
 # you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+environment:
+  MYSQL_HOST: ${param:MYSQL_HOST}
+  MYSQL_USER: ${param:MYSQL_USER}
+  MYSQL_PASSWD: ${param:MYSQL_PASSWD}
+  MYSQL_DB: ${param:MYSQL_DB}
+  MYSQL_PORT: ${param:MYSQL_PORT}
 
 # you can add packaging information here
 #package:

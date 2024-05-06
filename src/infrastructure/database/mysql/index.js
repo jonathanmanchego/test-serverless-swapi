@@ -9,6 +9,7 @@ const connectionPool = async () => {
     user: process.env.MYSQL_USER || "root",
     password: process.env.MYSQL_PASSWD || "YyMcSAjskRLfwxJDqXLnVasmhupcvKNI",
     database: process.env.MYSQL_DB || "railway",
+    port: process.env.MYSQL_PORT || 50169,
   });
 
   const connect = await connection.getConnection();

@@ -8,7 +8,7 @@ class PersonRepository {
   async create(person) {
     const personEntity = new PersonModel(person);
     const [rows] = await this.db.query(
-      `INSERT INTO persons 
+      `INSERT INTO Persons 
       (name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, create_time) 
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
